@@ -1,0 +1,9 @@
+.row{
+  margin: inherit !important;
+}
+
+.open-modal{
+	position: fixed;
+	bottom: 30px;
+    right: 30px;
+}
