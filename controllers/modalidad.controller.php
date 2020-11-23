@@ -8,6 +8,10 @@ class ModalidadController {
 		$this->modalidad = new Modalidad();
 	}
 
+	public function IndexSelect() {
+		require_once 'views/modalidad/modalidadSelect.php';
+	}
+
 	public function Index() {
 		require_once 'views/modalidad/index.php';
 	}

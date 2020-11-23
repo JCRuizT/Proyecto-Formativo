@@ -2,14 +2,14 @@
   		<div class="modal-dialog modal-dialog-centered" role="document">
     		<div class="modal-content animation-dark">
       			<div class="modal-header">
-        			<h5 class="modal-title">Modalidad</h5>
+        			<h5 class="modal-title">Tipo de identificacion</h5>
         			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           				<span aria-hidden="true">&times;</span>
         			</button>
       			</div>
       			<div class="modal-body">
 
-      				<form name="formmodalidad" class="form-cerrar" id="formmodalidad" onSubmit="Validar(); return false">
+      				<form name="formtidentificacion" id="formtidentificacion" class="form-cerrar" onSubmit="Validar(); return false">
 
 						<input type="text" name="id" hidden>
 						<div class="form-group">

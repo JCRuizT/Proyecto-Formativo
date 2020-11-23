@@ -10,7 +10,7 @@ function ObjAjax() {
 function Insertar() {
     var result = document.getElementById('tview');
 
-    var nombre = document.formmodalidad.nombre.value;
+    var nombre = document.formpformacion.nombre.value;
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
     ajax.open("POST", "main.php", true); // Se usa el Controlador General y su Accion
@@ -21,7 +21,7 @@ function Insertar() {
             {
 
                 result.innerHTML = ajax.responseText;
-                document.formmodalidad.reset();
+                document.formpformacion.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -36,7 +36,7 @@ function Insertar() {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=modalidad&acti=insertar&nombre=" + nombre);
+    ajax.send("ctrl=pformacion&acti=insertar&nombre=" + nombre);
 }
 
 
@@ -52,13 +52,14 @@ function Borrar(id) {
             {
 
                 result.innerHTML = ajax.responseText;
-                document.formmodalidad.reset();
+                document.formpformacion.reset();
                 $('#table-data').DataTable({
 
                     "language": {
                         "url": "views/assets/js/spanish.json"
                     }
                 });
+
 
 
             } else {
@@ -68,14 +69,14 @@ function Borrar(id) {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=modalidad&acti=eliminar&id=" + id);
+    ajax.send("ctrl=pformacion&acti=eliminar&id=" + id);
 }
 
 
 
 function Editar(id, nombre) {
-    document.formmodalidad.id.value = id;
-    document.formmodalidad.nombre.value = nombre;
+    document.formpformacion.id.value = id;
+    document.formpformacion.nombre.value = nombre;
     document.getElementById("btnguardar").value = "Actualizar";
     // Cambiar la propiedad DEL FORMULARIO desde javascript de ONSUBMIT() ONCLICK() CAMBIE  -> UPDATEUSUARIO() al boton guardar
 }
@@ -83,8 +84,8 @@ function Editar(id, nombre) {
 function Update() {
 
     var result = document.getElementById('tview');
-    var id = document.formmodalidad.id.value;
-    var nombre = document.formmodalidad.nombre.value;
+    var id = document.formpformacion.id.value;
+    var nombre = document.formpformacion.nombre.value;
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
     ajax.open("POST", "main.php", true); // Se usa el Controlador General y su Accion
@@ -95,7 +96,7 @@ function Update() {
             {
                 result.innerHTML = ajax.responseText;
                 document.getElementById("btnguardar").value = "Guardar";
-                document.formmodalidad.reset();
+                document.formpformacion.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -111,7 +112,7 @@ function Update() {
         }
     };
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=modalidad&acti=actualizar&id=" + id + "&nombre=" + nombre);
+    ajax.send("ctrl=pformacion&acti=actualizar&id=" + id + "&nombre=" + nombre);
 }
 
 function Validar() {

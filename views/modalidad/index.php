@@ -11,7 +11,7 @@
                 <div id="tview">
                     <?php include 'modalidadSelect.php';?>
                 </div>
-                <button data-toggle="modal" title="Crear usuario" class="open-modal btn btn-success rounded-circle" data-target="#modal">+</button>
+                <button data-toggle="modal" title="Crear modalidad" class="open-modal btn btn-dark rounded-circle" data-target="#modal">+</button>
 
             	<?php include 'modalidadInsert.php';?>
             </div>
