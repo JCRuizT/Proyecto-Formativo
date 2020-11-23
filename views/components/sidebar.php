@@ -118,6 +118,13 @@
                                         </div>Programas de formación
                                     </a>
 
+                                    <a class="nav-link link-ajax" href="?ctrl=tprogramaformacion">
+
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-cog"></i>
+                                        </div>Tipos de programas de formación
+                                    </a>
+
                                     <a class="nav-link link-ajax" href="?ctrl=tidentificacion">
 
                                         <div class="sb-nav-link-icon">
