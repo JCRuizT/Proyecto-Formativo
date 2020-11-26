@@ -1,3 +1,4 @@
+<script src="views/assets/js/scripts.tpformacion.js"></script>
 <div class="card">
  	<div class="card-header">
     	Fases

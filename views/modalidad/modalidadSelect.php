@@ -1,3 +1,4 @@
+<script src="views/assets/js/scripts.modalidad.js"></script>
 <div class="card">
  	<div class="card-header">
     Modalidades

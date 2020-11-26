@@ -120,7 +120,7 @@ function Update() {
             {
                 result.innerHTML = ajax.responseText;
                 document.getElementById("btnguardar").value = "Guardar";
-                document.formjornada.reset();
+                document.formficha.reset();
                 $('#table-data').DataTable({
 
                     "language": {

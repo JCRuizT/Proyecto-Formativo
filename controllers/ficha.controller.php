@@ -16,12 +16,12 @@ class FichaController {
 	private $oferta;
 
 	public function __Construct() {
-		$this->ficha = new Ficha(); // Instancia de la Clase del Modelo 
+		$this->ficha = new Ficha(); // Instancia de la Clase del Modelo
 		$this->pformacion = new Pformacion();
-		$this->estado= new Estado();
-		$this->jornada= new Jornada();
+		$this->estado = new Estado();
+		$this->jornada = new Jornada();
 		$this->modalidad = new Modalidad();
-		$this->oferta= new Oferta();
+		$this->oferta = new Oferta();
 
 	}
 

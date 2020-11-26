@@ -2,23 +2,6 @@
 <script src="views/assets/js/jquery-confirm.min.js"></script>
 <script src="views/assets/js/bootstrap.bundle.min.js"></script>
 <script src="views/assets/js/bootstrap.min.js"></script>
-<script src="views/assets/js/scripts.estado.js"></script>
-<script src="views/assets/js/scripts.pformacion.js"></script>
-<script src="views/assets/js/scripts.ficha.js"></script>
-<script src="views/assets/js/scripts.jornada.js"></script>
-<script src="views/assets/js/scripts.modalidad.js"></script>
-<script src="views/assets/js/scripts.oferta.js"></script>
-<script src="views/assets/js/scripts.pformacion.js"></script>
-<script src="views/assets/js/scripts.rol.js"></script>
-<script src="views/assets/js/scripts.tidentificacion.js"></script>
-<script src="views/assets/js/scripts.tpformacion.js"></script>
-<script>
-
-	$('form').submit(function() {
-    	$('#modal').modal('hide');
-	});
-
-</script>
 <script>
 
 	$('#modal').on('hidden.bs.modal', function () {

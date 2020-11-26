@@ -16,7 +16,7 @@
 						<div class="form-group">
 
 							<label>Numero de Ficha</label>
-							<input type="text" class="form-control" required name="fic_num">
+							<input type="text" readonly class="form-control" required name="fic_num">
 						</div>
             <div class="form-group">
 
@@ -34,7 +34,7 @@
               <select name="fic_progra" class="form-control">
                 <option value="">Seleccione </option>
                <?php foreach ($this->pformacion->Select() as $filas): ?>
-                <option value="<?php echo $filas->Pro_IdProg; ?>"> <?php echo $filas->Pro_NombreProg;?></option>
+                <option value="<?php echo $filas->Pro_IdProg; ?>"> <?php echo $filas->Pro_NombreProg; ?></option>
 
                 <?php endforeach;?>
               </select>
@@ -45,7 +45,7 @@
               <select name="fic_est" class="form-control">
                 <option value="">Seleccione </option>
                <?php foreach ($this->estado->Select() as $est): ?>
-                <option value="<?php echo $est->Est_Id; ?>"> <?php echo $est->Est_Estado;?></option>
+                <option value="<?php echo $est->Est_Id; ?>"> <?php echo $est->Est_Estado; ?></option>
 
                 <?php endforeach;?>
               </select>
@@ -57,7 +57,7 @@
               <select name="fic_jor" class="form-control">
                 <option value="">Seleccione </option>
                <?php foreach ($this->jornada->Select() as $jor): ?>
-                <option value="<?php echo $jor->TipJor_Id; ?>"> <?php echo $jor->TipJor_Nombre;?></option>
+                <option value="<?php echo $jor->TipJor_Id; ?>"> <?php echo $jor->TipJor_Nombre; ?></option>
 
                 <?php endforeach;?>
               </select>
@@ -69,7 +69,7 @@
               <select name="fic_mod" class="form-control">
                 <option value="">Seleccione </option>
                <?php foreach ($this->modalidad->Select() as $mod): ?>
-                <option value="<?php echo $mod->Mod_Id; ?>"> <?php echo $mod->Mod_Nombre;?></option>
+                <option value="<?php echo $mod->Mod_Id; ?>"> <?php echo $mod->Mod_Nombre; ?></option>
 
                 <?php endforeach;?>
               </select>
@@ -81,7 +81,7 @@
               <select name="fic_ofer" class="form-control">
                 <option value="">Seleccione </option>
                <?php foreach ($this->oferta->Select() as $ofer): ?>
-                <option value="<?php echo $ofer->TipOfe_Id; ?>"> <?php echo $ofer->TipOfe_Nombre;?></option>
+                <option value="<?php echo $ofer->TipOfe_Id; ?>"> <?php echo $ofer->TipOfe_Nombre; ?></option>
 
                 <?php endforeach;?>
               </select>
@@ -95,13 +95,3 @@
     		</div>
   		</div>
 	</div>
-
-  <script>
-   $('#btnguardar').submit(function(e) {
-    e.preventDefault();
-    // Coding
-    $('#modal').modal('toggle'); //or  $('#IDModal').modal('hide');
-    return false;
-});
-
-  </script>
