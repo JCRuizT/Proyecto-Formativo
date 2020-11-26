@@ -16,7 +16,31 @@
 
 							<label>Nombre</label>
 							<input type="text" class="form-control" required name="nombre">
+
 						</div>
+
+            <div class="form-group">
+               <label>Codigo</label>
+              <input type="text" class="form-control" required name="codigo">
+            </div>
+
+            <div class="form-group">
+              <label>Versión</label>
+              <input type="text" class="form-control" required name="version">
+            </div>
+
+            <div class="form-group">
+
+               <label>Duracion</label>
+              <input type="text" class="form-control" required name="duracion">
+            </div>
+
+            <div class="form-group">
+
+              <select class="form-control">
+                <option value="0">Julio</option>
+              </select>
+            </div>
 
 						<input class="form-control btn btn-success" type="submit" value="Guardar" id="btnguardar">
 

@@ -13,25 +13,26 @@ class Anuncio {
 
 	public function Select() {
 		try {
-			$sql = $this->pdo->prepare("SELECT * FROM tbl_anuncio ORDER BY Anun_Id DESC");
+			$sql = $this->pdo->prepare("SELECT ta.Anun_Id,ta.Anun_Nombre,ta.Anun_Cuerpo,ta.Anun_Fecha_Creacion,tu.Usu_Nomb1,tu.Usu_Ape1 FROM tblanuncio as ta,tblusuario as tu where ta.TblEstado_Est_Id= 1 and tu.Usu_Identificacion = ta.TblUsuario_Usu_Id ORDER BY ta.Anun_Id DESC");
 			$sql->execute();
 			return $sql->fetchALL(PDO::FETCH_OBJ);
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}
-	}
 
+	}
 
 	public function Insert(Anuncio $data) {
 		try {
-			$sql = "INSERT INTO tbl_anuncio VALUES(?,?,?,?,?,?)";
+
+			$sql = "INSERT INTO tblanuncio VALUES(?,?,?,?,?,?)";
 			$this->pdo->prepare($sql)->execute(
 				array(
 					$data->titulo,
 					$data->descrp,
 					$data->fchcre,
 					$data->ficid,
-					$data->estid
+					$data->estid,
 					$data->usuid,
 				)
 			);
@@ -42,7 +43,7 @@ class Anuncio {
 
 	public function Delete($id) {
 		try {
-			$sql = "DELETE FROM tbl_anuncio WHERE anu_id=?";
+			$sql = "UPDATE tblanuncio set TblEstado_Est_Id WHERE Anun_Id=?";
 			$this->pdo->prepare($sql)->execute(
 				array(
 					$id,
@@ -55,18 +56,14 @@ class Anuncio {
 
 	public function Update(Anuncio $data) {
 		try {
-			$sql = "UPDATE tbl_anuncio SET anu_titl=?,anu_descrp=?,anu_fechcr=?,anu_fechfn=?,	anu_fichid=?,anu_usuid=?
-				WHERE anu_id=?";
+			$sql = "UPDATE tblanuncio SET Anun_Nombre=?,Anun_Cuerpo=?
+				WHERE Anun_Id=?";
 
 			$this->pdo->prepare($sql)->execute(
 				array(
 
 					$data->titulo,
 					$data->descrp,
-					$data->fchcre,
-					$data->fchfin,
-					$data->ficid,
-					$data->usuid,
 					$data->id,
 
 				)

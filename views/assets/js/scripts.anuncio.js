@@ -10,7 +10,8 @@ function ObjAjax() {
 function Insertar() {
     var result = document.getElementById('tview');
 
-    var nombre = document.formestado.nombre.value;
+    var titulo = document.formanuncio.titulo.value;
+    var descripcion = document.formanuncio.descripcion.value;
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
     ajax.open("POST", "main.php", true); // Se usa el Controlador General y su Accion
@@ -21,7 +22,7 @@ function Insertar() {
             {
 
                 result.innerHTML = ajax.responseText;
-                document.formestado.reset();
+                document.formanuncio.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -36,13 +37,11 @@ function Insertar() {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=estado&acti=insertar&nombre=" + nombre);
+    ajax.send("ctrl=anuncio&acti=insertar&titulo=" + titulo+"&descripcion="+descripcion);
 }
 
 
 function Borrar(id) {
-
-
     var result = document.getElementById('tview');
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
@@ -54,7 +53,7 @@ function Borrar(id) {
             {
 
                 result.innerHTML = ajax.responseText;
-                document.formestado.reset();
+                document.formanuncio.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -71,14 +70,15 @@ function Borrar(id) {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=estado&acti=eliminar&id=" + id);
+    ajax.send("ctrl=anuncio&acti=eliminar&id=" + id);
 }
 
 
 
-function Editar(id, nombre) {
-    document.formestado.id.value = id;
-    document.formestado.nombre.value = nombre;
+function Editar(id, titulo,descripcion) {
+    document.formanuncio.id.value = id;
+    document.formanuncio.titulo.value = titulo;
+    document.formanuncio.descripcion.value = descripcion;
     document.getElementById("btnguardar").value = "Actualizar";
     // Cambiar la propiedad DEL FORMULARIO desde javascript de ONSUBMIT() ONCLICK() CAMBIE  -> UPDATEUSUARIO() al boton guardar
 }
@@ -86,8 +86,9 @@ function Editar(id, nombre) {
 function Update() {
 
     var result = document.getElementById('tview');
-    var id = document.formestado.id.value;
-    var nombre = document.formestado.nombre.value;
+    var id = document.formanuncio.id.value;
+    var titulo = document.formanuncio.titulo.value;
+    var descripcion = document.formanuncio.descripcion.value;
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
     ajax.open("POST", "main.php", true); // Se usa el Controlador General y su Accion
@@ -98,7 +99,7 @@ function Update() {
             {
                 result.innerHTML = ajax.responseText;
                 document.getElementById("btnguardar").value = "Guardar";
-                document.formestado.reset();
+                document.formanuncio.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -114,10 +115,11 @@ function Update() {
         }
     };
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=estado&acti=actualizar&id=" + id + "&nombre=" + nombre);
+    ajax.send("ctrl=anuncio&acti=actualizar&id=" + id + "&titulo=" + titulo+"&descripcion="+descripcion);
 }
 
 function Validar() {
+
 
     if (document.getElementById("btnguardar").value == "Actualizar") {
         Update();

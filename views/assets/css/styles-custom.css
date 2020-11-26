@@ -30,3 +30,7 @@
 .svg-inline--fa{
 	color: #fff !important;
 }
+
+textarea{
+	resize: none !important;
+}

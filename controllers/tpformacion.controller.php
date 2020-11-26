@@ -34,7 +34,7 @@ class TpformacionController {
 	}
 	public function Actualizar() {
 
-		$datos = $this->pformacion;
+		$datos = $this->tpformacion;
 
 		$datos->name = $_REQUEST['nombre'];
 		$datos->id = $_REQUEST['id'];
