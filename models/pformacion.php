@@ -41,8 +41,8 @@ class Pformacion {
 
 	public function Insert(Pformacion $data) {
 		try {
-			$sql = "INSERT INTO tblprogramaformacion (Pro_NombreProg) VALUES(?)";
-			$this->pdo->prepare($sql)->execute(array($data->name));
+			$sql = "INSERT INTO tblprogramaformacion (Pro_NombreProg,Pro_Codigo,Pro_Version,Pro_Duracion,Tip_Prog,TblEstado_Est_Id) VALUES(?,?,?,?,?,?)";
+			$this->pdo->prepare($sql)->execute(array($data->name, $data->codigo, $data->version, $data->duracion, $data->tipoPrograma,$data->estado,));
 		} catch (Exception $e) {
 			die($e->getMessage());
 
@@ -53,8 +53,8 @@ class Pformacion {
 
 		try {
 
-			$sql = "UPDATE tblprogramaformacion SET Pro_NombreProg=?   WHERE Pro_IdProg=?;";
-			$this->pdo->prepare($sql)->execute(array($data->name, $data->id));
+			$sql = "UPDATE tblprogramaformacion SET Pro_NombreProg=?, Pro_Codigo=?,Pro_Version=?, Pro_Duracion=?, Tip_Prog=?, TblEstado_Est_Id=?  WHERE Pro_IdProg=?;";
+			$this->pdo->prepare($sql)->execute(array($data->name, $data->codigo, $data->version, $data->duracion, $data->tipoPrograma,$data->estado, $data->id,));
 		} catch (Exception $e) {
 			die($e->getMessage());
 

@@ -16,6 +16,36 @@
 
 							<label>Nombre</label>
 							<input type="text" class="form-control" required name="nombre">
+              <br>
+              <br>
+              <label>Codigo</label>
+              <input type="text" class="form-control" required name="codigo">
+              <br>
+              <br>
+              <label>Version</label>
+              <input type="text" class="form-control" required name="version">
+              <br>
+              <br>
+              <label>Duracion</label>
+              <input type="text" class="form-control" required name="duracion">
+              <br>
+              <br>
+              <label>Tipo Programa Formacion</label>
+              <br><br>
+              <select name="tipoPrograma" id="tipoPrograma">
+                <option value="1">Tecnologia</option>
+                <option value="2">Tecnico</option>
+                <option value="3">Especializacion</option> 
+              </select>
+              <br>
+              <br>
+              <label>Estado</label>
+              <br><br>
+              <select name="estado" id="estado">
+                <option value="1">Activo</option>
+                <option value="2">Inactivo</option> 
+
+              </select>
 						</div>
 
 						<input class="form-control btn btn-success" type="submit" value="Guardar" id="btnguardar">
