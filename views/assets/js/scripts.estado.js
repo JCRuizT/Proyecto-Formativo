@@ -7,6 +7,8 @@ function ObjAjax() {
     return xmlhttp;
 }
 
+
+
 function Insertar() {
     var result = document.getElementById('tview');
 

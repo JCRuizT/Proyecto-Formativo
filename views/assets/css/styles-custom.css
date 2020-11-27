@@ -7,15 +7,25 @@
 	bottom: 30px;
     right: 30px;
     font-weight: bold;
+    border: 0 !important;
 }
 
 #tview{
 	display:none;
 }
 
-.card-header{
-	font-weight: bold;
+[data-icon="user"] path{
+	color: #001064 !important;
 }
+
+.sb-sidenav-dark,.btn-primary,.open-modal,.modal-header{
+	background-color: #001064 !important;
+}
+
+.modal-header{
+	color: #fff !important;
+}
+
 
 .bg-white{
 	background-color: #fff;
@@ -27,10 +37,69 @@
 	font-size: 14px;
 }
 
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active{
+	color: #ff6f00 !important;
+}
+
+.navbar-brand{
+	margin-left: -90px !important;
+}
+
+.navbar-brand img{
+	width: 312px !important;
+}
+
 .svg-inline--fa{
 	color: #fff !important;
 }
 
+#sidebarToggle{
+	margin-left: 53px !important;
+}
+
+#sidebarToggle svg{
+	color: #001064 !important;
+}
+
 textarea{
 	resize: none !important;
+}
+
+.card-header{
+	background-color: #ff6f00 !important;
+	color: #fff !important;
+	font-weight: bold  !important;
+}
+
+.btn{
+
+	font-weight: bold !important;
+	font-size: 15px !important;
+}
+
+.sorting_asc,.sorting{
+	background: none !important;
+}
+
+.btn-light{
+	border: 1px solid rgb(0,0,0,0.2) !important;
+}
+/*
+.paginate_button .current{
+	background: red !important;
+}
+.paginate_button{
+	background-color: #000 !important;
+}*/
+
+.bg-intrasoft{
+	background-color: #001064 !important;
+}
+
+h3{
+	font-weight: bold !important;
+}
+
+.card{
+	margin-bottom: 20px !important;
 }
