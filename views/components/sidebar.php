@@ -4,7 +4,7 @@
             <div class="nav">
 
                 <div class="sb-sidenav-menu-heading">Modulos</div>
-                    <a class="nav-link" href="?controller=modalidad">
+                    <a class="nav-link" href="main.php?ctrl=foro">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-chart-area"></i>
                         </div>

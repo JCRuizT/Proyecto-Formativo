@@ -75,7 +75,7 @@ function BorrarForo(id) {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=pforo&acti=eliminar&id=" + id);
+    ajax.send("ctrl=foro&acti=eliminar&id="+id);
 }
 
 
