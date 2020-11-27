@@ -18,7 +18,7 @@
 
 			try{
 
-				$sql=$this->pdo->prepare("SELECT * FROM tblficha order by Fic_Id asc");
+				$sql=$this->pdo->prepare("SELECT Fic_Id,Fic_NumeroFicha,Fic_FechaInicio,Fic_FechaFin,TblProgramaFormacion_Pro_IdProg,tblficha.TblEstado_Est_Id,TblTipoJornada_TipJor_Id,TblModalidad_Mod_Id,TblTipoOferta_TipOfe_Id,tblprogramaformacion.Pro_NombreProg,tblprogramaformacion.Pro_Codigo,tbltipojornada.TipJor_Nombre,tblmodalidad.Mod_Nombre,tbltipooferta.TipOfe_Nombre FROM tblficha,tblprogramaformacion,tbltipojornada,tblmodalidad,tbltipooferta where tblficha.TblProgramaFormacion_Pro_IdProg = tblprogramaformacion.Pro_IdProg and tblficha.TblTipoJornada_TipJor_Id=tbltipojornada.TipJor_Id and tblficha.TblModalidad_Mod_Id=tblmodalidad.Mod_Id and tblficha.TblTipoOferta_TipOfe_Id=tbltipooferta.TipOfe_Id ORDER by Fic_Id asc");
 				$sql->execute();
 				return $sql->fetchALL(PDO::FETCH_OBJ);
 			}catch(Exception $e){
@@ -26,7 +26,14 @@
 				die($e->getMessage());
 			}
 		}
+/*
+		public function SelectDeta(){
+			try{
+				$sql=$this->pdo->prepare("select Fic_Id,Fic_NumeroFicha,Fic_FechaInicio,Fic_FechaFin,TblProgramaFormacion_Pro_IdProg,tblficha.TblEstado_Est_Id,TblTipoJornada_TipJor_Id,TblModalidad_Mod_Id,TblTipoOferta_TipOfe_Id,tblprogramaformacion.Pro_NombreProg,tblprogramaformacion.Pro_Codigo,tbltipojornada.TipJor_Nombre,tblmodalidad.Mod_Nombre,tbltipooferta.TipOfe_Nombre FROM tblficha,tblprogramaformacion,tbltipojornada,tblmodalidad,tbltipooferta where tblficha.TblProgramaFormacion_Pro_IdProg = tblprogramaformacion.Pro_IdProg and tblficha.TblTipoJornada_TipJor_Id=tbltipojornada.TipJor_Id and tblficha.TblModalidad_Mod_Id=tblmodalidad.Mod_Id and tblficha.TblTipoOferta_TipOfe_Id=tbltipooferta.TipOfe_Id ORDER by Fic_Id");
+			}
+		}
 
+*/
 		public function Get($id) {
 					 		
 			try   {

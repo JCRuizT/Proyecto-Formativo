@@ -7,17 +7,15 @@ function ObjAjax() {
     return xmlhttp;
 }
 
-function InsertFicha() {
+function InsertForo() {
     var result = document.getElementById('tview');
 
-    var fic_num = document.formficha.fic_num.value;
-    var fic_fecIn = document.formficha.fic_fecIn.value;
-    var fic_fecfin = document.formficha.fic_fecfin.value;
-    var fic_progra = document.formficha.fic_progra.value;
-    var fic_est = document.formficha.fic_est.value;
-    var fic_jor = document.formficha.fic_jor.value;
-    var fic_mod = document.formficha.fic_mod.value;
-    var fic_ofer = document.formficha.fic_ofer.value;
+    var for_nom = document.formforo.for_nom.value;
+    var for_cue = document.formforo.for_cue.value;
+    var for_fec = document.formforo.for_fec.value;
+    var for_usu = document.formforo.for_usu.value;
+    var for_est = document.formforo.for_est.value;
+    var for_fic = document.formforo.for_fic.value;
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
     ajax.open("POST", "main.php", true); // Se usa el Controlador General y su Accion
@@ -28,7 +26,7 @@ function InsertFicha() {
             {
 
                 result.innerHTML = ajax.responseText;
-                document.formficha.reset();
+                document.formforo.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -43,13 +41,13 @@ function InsertFicha() {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=ficha&acti=insertar&fic_num="+fic_num+"&fic_fecIn="+fic_fecIn+"&fic_fecfin="+fic_fecfin+"&fic_progra="+fic_progra+"&fic_est="+fic_est+"&fic_jor="+fic_jor+"&fic_mod="+fic_mod+"&fic_ofer="+fic_ofer);
+    ajax.send("ctrl=foro&acti=insertar&for_nom="+for_nom+"&for_cue="+for_cue+"&for_fec="+for_fec+"&for_usu="+for_usu+"&for_est="+for_est+"&for_fic="+for_fic);
 }
 
 
 
 
-function BorrarFicha(id) {
+function BorrarForo(id) {
     var result = document.getElementById('tview');
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
@@ -61,7 +59,7 @@ function BorrarFicha(id) {
             {
 
                 result.innerHTML = ajax.responseText;
-                document.formficha.reset();
+                document.formforo.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -77,21 +75,19 @@ function BorrarFicha(id) {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=ficha&acti=eliminar&id=" + id);
+    ajax.send("ctrl=pforo&acti=eliminar&id=" + id);
 }
 
 
 
-function Editar(Fic_Id, Fic_NumeroFicha,Fic_FechaInicio,Fic_FechaFin,TblProgramaFormacion_Pro_IdProg,TblEstado_Est_Id,TblTipoJornada_TipJor_Id,TblModalidad_Mod_Id,TblTipoOferta_TipOfe_Id) {
-    document.formficha.id.value = Fic_Id
-    document.formficha.fic_num.value = Fic_NumeroFicha;
-    document.formficha.fic_fecIn.value = Fic_FechaInicio;
-    document.formficha.fic_fecfin.value = Fic_FechaFin;
-    document.formficha.fic_progra.value = TblProgramaFormacion_Pro_IdProg;
-    document.formficha.fic_est.value = TblEstado_Est_Id;
-    document.formficha.fic_jor.value = TblTipoJornada_TipJor_Id;
-    document.formficha.fic_mod.value = TblModalidad_Mod_Id;
-    document.formficha.fic_ofer.value = TblTipoOferta_TipOfe_Id;
+function Editar(id,for_nom,for_cue,for_fec,for_usu,for_est,for_fic) {
+    document.formforo.id.value = id;
+    document.formforo.for_nom.value = for_nom;
+    document.formforo.for_cue.value = for_cue;
+    document.formforo.for_fec.value = for_fec;
+    document.formforo.for_usu.value = for_usu;
+    document.formforo.for_est.value = for_est;
+    document.formforo.for_fic.value = for_fic;
     document.getElementById("btnguardar").value = "Actualizar";
     // Cambiar la propiedad DEL FORMULARIO desde javascript de ONSUBMIT() ONCLICK() CAMBIE  -> UPDATEUSUARIO() al boton guardar
 }
@@ -99,15 +95,13 @@ function Editar(Fic_Id, Fic_NumeroFicha,Fic_FechaInicio,Fic_FechaFin,TblPrograma
 function Update() {
 
     var result = document.getElementById('tview');
-    var id =  document.formficha.id.value;
-    var fic_num = document.formficha.fic_num.value;
-    var fic_fecIn = document.formficha.fic_fecIn.value;
-    var fic_fecfin = document.formficha.fic_fecfin.value;
-    var fic_progra = document.formficha.fic_progra.value;
-    var fic_est = document.formficha.fic_est.value;
-    var fic_jor = document.formficha.fic_jor.value;
-    var fic_mod = document.formficha.fic_mod.value;
-    var fic_ofer = document.formficha.fic_ofer.value;
+    var id =  document.formforo.id.value;
+    var for_nom = document.formforo.for_nom.value;
+    var for_cue = document.formforo.for_cue.value;
+    var for_fec = document.formforo.for_fec.value;
+    var for_usu = document.formforo.for_usu.value;
+    var for_est = document.formforo.for_est.value;
+    var for_fic = document.formforo.for_fic.value;
     
 
 
@@ -120,7 +114,7 @@ function Update() {
             {
                 result.innerHTML = ajax.responseText;
                 document.getElementById("btnguardar").value = "Guardar";
-                document.formficha.reset();
+                document.formforo.reset();
                 $('#table-data').DataTable({
 
                     "language": {
@@ -136,7 +130,7 @@ function Update() {
         }
     };
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=ficha&acti=actualizar&fic_num="+fic_num+"&fic_fecIn="+fic_fecIn+"&fic_fecfin="+fic_fecfin+"&fic_progra="+fic_progra+"&fic_est="+fic_est+"&fic_jor="+fic_jor+"&fic_mod="+fic_mod+"&fic_ofer="+fic_ofer+"&id="+id);
+    ajax.send("ctrl=foro&acti=actualizar&for_nom="+for_nom+"&for_cue="+for_cue+"&for_fec="+for_fec+"&for_usu="+for_usu+"&for_est="+for_est+"&for_fic="+for_fic+"&id="+id);
 }
 
 function ValidarF() {
@@ -144,6 +138,6 @@ function ValidarF() {
     if (document.getElementById("btnguardar").value == "Actualizar") {
         Update();
     } else if (document.getElementById("btnguardar").value == "Guardar") {
-        InsertFicha();
+        InsertForo();
     }
 }

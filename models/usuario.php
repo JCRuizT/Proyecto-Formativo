@@ -10,7 +10,7 @@ class Usuario {
 
 	public function Select() {
 		try {
-			$sql = $this->pdo->prepare("SELECT * FROM TBL_USUARIO order by usu_id desc");
+			$sql = $this->pdo->prepare("SELECT * FROM  tblusuario order by Usu_Identificacion desc");
 			$sql->execute();
 			return $sql->fetchALL(PDO::FETCH_OBJ);
 		} catch (Exception $e) {die($e->getMessage());}

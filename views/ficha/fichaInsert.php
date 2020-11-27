@@ -16,7 +16,7 @@
 						<div class="form-group">
 
 							<label>Numero de Ficha</label>
-							<input type="text" class="form-control" required name="fic_num">
+							<input type="number" class="form-control" required name="fic_num">
 						</div>
             <div class="form-group">
 

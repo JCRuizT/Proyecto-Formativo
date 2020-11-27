@@ -8,6 +8,7 @@
 		<thead>
 			<tr>
 				<th>id 			</th>
+				<th>Programa Formacion</th>
 				<th>Nº Ficha 	</th>
 				<th> Estado</th>
 				<th>Editar		</th>
@@ -23,6 +24,7 @@
 
 						<tr>
 							<td>	<?php echo $filas->Fic_Id; ?> </td>
+							<td><?php echo $filas->Pro_NombreProg;?></td>
 							<td>	<?php echo $filas->Fic_NumeroFicha; ?> </td>
 							<td> <?php echo ($filas->TblEstado_Est_Id==1) ? "Activo" : "Inactivo"; ?> </td>
 							<td> 	<button data-toggle="modal" data-target="#modal" class="btn btn-primary"onclick="Editar(<?php echo $grupal; ?>)"> Editar   </button>    </td>
