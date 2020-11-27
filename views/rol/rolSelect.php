@@ -1,3 +1,4 @@
+<script src="views/assets/js/scripts.rol.js"></script>
 <div class="card">
  	<div class="card-header">
     	Rol

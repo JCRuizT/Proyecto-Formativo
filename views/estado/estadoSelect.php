@@ -1,3 +1,4 @@
+<script src="views/assets/js/scripts.estado.js"></script>
 <div class="card">
  	<div class="card-header">
     	Lista de estados

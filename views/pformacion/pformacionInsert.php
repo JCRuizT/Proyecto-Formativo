@@ -16,6 +16,46 @@
 
 							<label>Nombre</label>
 							<input type="text" class="form-control" required name="nombre">
+            </div>
+
+            <div class="form-group">
+              <label>Codigo</label>
+              <input type="text" class="form-control" required name="codigo">
+            </div>
+
+            <div class="form-group">
+              <label>Version</label>
+              <input type="text" class="form-control" required name="version">
+            </div>
+
+
+            <div class="form-group">
+              <label>Duracion</label>
+              <input type="text" class="form-control" required name="duracion">
+            </div>
+
+            <div class="form-group">
+              <label>Tipo Programa Formacion</label>
+
+               <select name="tipoPrograma" class="form-control">
+                  <option value="-1">Seleccione </option>
+                <?php foreach ($this->tpformacion->Select() as $tp): ?>
+                <option value="<?php echo $tp->Tip_Prog; ?>"> <?php echo $tp->Tip_Nombre; ?></option>
+
+                <?php endforeach;?>
+              </select>
+            </div>
+
+            <div class="form-group">
+
+              <label>Estado</label>
+              <select name="estado" class="form-control">
+                <option value="-1">Seleccione </option>
+               <?php foreach ($this->estado->Select() as $est): ?>
+                <option value="<?php echo $est->Est_Id; ?>"> <?php echo $est->Est_Estado; ?></option>
+
+                <?php endforeach;?>
+              </select>
 						</div>
 
 						<input class="form-control btn btn-success" type="submit" value="Guardar" id="btnguardar">

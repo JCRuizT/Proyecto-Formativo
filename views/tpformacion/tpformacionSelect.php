@@ -1,7 +1,7 @@
-<script src="views/assets/js/scripts.tidentificacion.js"></script>
+<script src="views/assets/js/scripts.tpformacion.js"></script>
 <div class="card">
  	<div class="card-header">
-    	Tipo de identificacion
+    	Fases
 	</div>
 <div class="card-body">
 <table id="table-data">
@@ -9,7 +9,7 @@
 		<thead>
 			<tr>
 				<th>id 			</th>
-				<th>Nombre tipo identificacion </th>
+				<th>Nombre Fase </th>
 				<th>Editar		</th>
 				<th>Eliminar	</th>
 			</tr>
@@ -17,15 +17,15 @@
 
 		<!-- Cuerpo de la Tabla -->
 		<tbody>
-				<?php foreach ($this->tidentificacion->Select() as $filas): ?>
+				<?php foreach ($this->tpformacion->Select() as $filas): ?>
 
-					 	<?php $grupal = "'" . $filas->TipIde_Id . "','" . $filas->TipIde_Nombre . "'";?>
+					 	<?php $grupal = "'" . $filas->Tip_Prog . "','" . $filas->Tip_Nombre . "'";?>
 
 						<tr>
-							<td>	<?php echo $filas->TipIde_Id; ?> </td>
-							<td>	<?php echo $filas->TipIde_Nombre; ?> </td>
+							<td>	<?php echo $filas->Tip_Prog; ?> </td>
+							<td>	<?php echo $filas->Tip_Nombre; ?> </td>
 							<td> 	<button data-toggle="modal" data-target="#modal" class="btn btn-primary"onclick="Editar(<?php echo $grupal; ?>)"> Editar   </button>    </td>
-							<td> 	<button class="btn btn-danger" onclick="Borrar(<?php echo $filas->TipIde_Id; ?>);"> Eliminar </button>    </td>
+							<td> 	<button class="btn btn-danger" onclick="Borrar(<?php echo $filas->Tip_Prog; ?>);"> Eliminar </button>    </td>
 						</tr>
 
 				<?php endforeach;?>

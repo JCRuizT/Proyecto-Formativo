@@ -65,7 +65,7 @@
                         </div>Horario - Instructor
                     </a>
 
-                    <a class="nav-link" href="tables.html">
+                    <a class="nav-link link-ajax" href="?ctrl=ficha">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-table"></i>
                         </div>Gestionar fichas
@@ -113,71 +113,55 @@
                                     <!-- Modulos -->
                                     <a class="nav-link link-ajax" href="?ctrl=pformacion">
 
-                                        <div class="sb-nav-link-icon">
+                                        <!--<div class="sb-nav-link-icon">
                                             <i class="fas fa-cog"></i>
-                                        </div>Programas de formación
+                                        </div>-->Programas de formación
                                     </a>
 
-                                    <a class="nav-link link-ajax" href="?ctrl=tprogramaformacion">
+                                    <a class="nav-link link-ajax" href="?ctrl=tpformacion">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>Tipos de programas de formación
+                                       Tipos de programas de formación
                                     </a>
 
                                     <a class="nav-link link-ajax" href="?ctrl=tidentificacion">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
+
                                         Tipos de identificacion
                                     </a>
 
                                     <a class="nav-link link-ajax" href="?ctrl=fase">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
+
                                         Fases
                                     </a>
 
                                     <a class="nav-link link-ajax" href="?ctrl=estado">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
+
                                         Estados
                                     </a>
 
                                     <a class="nav-link link-ajax" href="?ctrl=oferta">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
+
                                         Tipos de ofertas
                                     </a>
 
                                     <a class="nav-link link-ajax" href="?ctrl=jornada">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
+
                                         Jornadas
                                     </a>
 
                                     <a class="nav-link link-ajax" href="?ctrl=modalidad">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
+
                                         Modalidades
                                     </a>
 
                                     <a class="nav-link link-ajax" href="?ctrl=rol">
 
-                                        <div class="sb-nav-link-icon">
-                                            <i class="fas fa-cog"></i>
-                                        </div>
+
                                         Roles
                                     </a>
 

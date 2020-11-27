@@ -1,7 +1,7 @@
 <?php
 require_once 'models/database.php';
 $controller = 'usuario';
-$dev = true; // true: para modo desarrollo
+$dev = false; // true: para modo desarrollo
 // false: para modo produccion
 
 if (!ISSET($_REQUEST['ctrl'])) {

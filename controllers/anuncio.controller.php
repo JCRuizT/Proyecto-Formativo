@@ -15,14 +15,15 @@ class AnuncioController {
 
 	public function Insertar() {
 
+		date_default_timezone_set('America/Bogota');
 		$datos = $this->anuncio;
 
 		$datos->titulo = $_REQUEST['titulo'];
-		$datos->descrp = $_REQUEST['descrp'];
-		$datos->fchcre = $_REQUEST['fchcre'];
-		$datos->fchfin = $_REQUEST['fchfin'];
-		$datos->usuid = $_REQUEST['usuid'];
-		$datos->ficid = $_REQUEST['ficid'];
+		$datos->descrp = $_REQUEST['descripcion'];
+
+		$datos->ficid = 1907036; // para cambiar dependiendo la ficha
+		$datos->fchcre = date('Y-m-d');
+		$datos->usuid = 1005934460; // dependiendo la session, y el usuario ingresado
 		$datos->estid = 1;
 		$this->anuncio->Insert($datos);
 
@@ -37,16 +38,12 @@ class AnuncioController {
 	public function Actualizar() {
 		$datos = $this->anuncio;
 
-		$datos->titulo = $_REQUEST['titulo'];
-		$datos->descrp = $_REQUEST['descrp'];
-		$datos->fchcre = $_REQUEST['fchcre'];
-		$datos->fchfin = $_REQUEST['fchfin'];
-		$datos->usuid = $_REQUEST['usuid'];
-		$datos->ficid = $_REQUEST['ficid'];
 		$datos->id = $_REQUEST['id'];
+		$datos->titulo = $_REQUEST['titulo'];
+		$datos->descrp = $_REQUEST['descripcion'];
 
 		$this->anuncio->Update($datos);
-		require_once '../views/anuncio/anuncioSelect.php';
+		require_once 'views/anuncio/anuncioSelect.php';
 	}
 
 }

@@ -70,10 +70,6 @@
                             $(".link-ajax").removeClass("active");
                             $($this).addClass("active");
                         }
-
-                        console.log(path);
-                        console.log($this.href);
-                        $("h3").html($($this).html());
                     }
                 });
             }

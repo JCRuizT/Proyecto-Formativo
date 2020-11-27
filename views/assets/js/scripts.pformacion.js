@@ -11,6 +11,11 @@ function Insertar() {
     var result = document.getElementById('tview');
 
     var nombre = document.formpformacion.nombre.value;
+    var codigo = document.formpformacion.codigo.value;
+    var version = document.formpformacion.version.value;
+    var duracion = document.formpformacion.duracion.value;
+    var tipoPrograma = document.formpformacion.tipoPrograma.value;
+    var estado = document.formpformacion.estado.value;
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
     ajax.open("POST", "main.php", true); // Se usa el Controlador General y su Accion
@@ -36,7 +41,7 @@ function Insertar() {
     };
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=pformacion&acti=insertar&nombre=" + nombre);
+    ajax.send("ctrl=pformacion&acti=insertar&nombre="+nombre+"&codigo="+codigo+"&version="+version+"&duracion="+duracion+"&tipoPrograma="+tipoPrograma+"&estado="+estado);
 }
 
 
@@ -74,9 +79,15 @@ function Borrar(id) {
 
 
 
-function Editar(id, nombre) {
+function Editar(id, nombre, codigo, version, duracion, tipoPrograma, estado) {
     document.formpformacion.id.value = id;
     document.formpformacion.nombre.value = nombre;
+    document.formpformacion.codigo.value = codigo;
+    document.formpformacion.version.value = version;
+    document.formpformacion.duracion.value = duracion;
+    document.formpformacion.tipoPrograma.value = tipoPrograma;
+    document.formpformacion.estado.value = estado;
+
     document.getElementById("btnguardar").value = "Actualizar";
     // Cambiar la propiedad DEL FORMULARIO desde javascript de ONSUBMIT() ONCLICK() CAMBIE  -> UPDATEUSUARIO() al boton guardar
 }
@@ -86,6 +97,11 @@ function Update() {
     var result = document.getElementById('tview');
     var id = document.formpformacion.id.value;
     var nombre = document.formpformacion.nombre.value;
+    var codigo = document.formpformacion.codigo.value;
+    var version = document.formpformacion.version.value;
+    var duracion = document.formpformacion.duracion.value;
+    var tipoPrograma = document.formpformacion.tipoPrograma.value;
+    var estado = document.formpformacion.estado.value;
 
     const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
     ajax.open("POST", "main.php", true); // Se usa el Controlador General y su Accion
@@ -112,7 +128,7 @@ function Update() {
         }
     };
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("ctrl=pformacion&acti=actualizar&id=" + id + "&nombre=" + nombre);
+    ajax.send("ctrl=pformacion&acti=actualizar&id="+id+"&nombre="+nombre+"&codigo="+codigo +"&version="+version+"&duracion="+duracion+"&tipoPrograma="+tipoPrograma+"&estado="+estado);
 }
 
 function Validar() {
