@@ -4,7 +4,12 @@
             <div class="nav">
 
                 <div class="sb-sidenav-menu-heading">Modulos</div>
+
                     <a class="nav-link" href="main.php?ctrl=foro">
+
+
+                    <a class="nav-link" href="?ctrl=anuncio">
+
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-chart-area"></i>
                         </div>
@@ -40,6 +45,8 @@
                         Instructores
                     </a>
 
+
+
                     <a class="nav-link" href="charts.html">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-chart-area"></i>
@@ -64,6 +71,8 @@
                             <i class="fas fa-calendar-alt"></i>
                         </div>Horario - Instructor
                     </a>
+
+
 
                     <a class="nav-link link-ajax" href="?ctrl=ficha">
                         <div class="sb-nav-link-icon">

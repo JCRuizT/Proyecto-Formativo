@@ -25,9 +25,10 @@ class Anuncio {
 	public function Insert(Anuncio $data) {
 		try {
 
-			$sql = "INSERT INTO tblanuncio VALUES(?,?,?,?,?,?)";
+			$sql = "INSERT INTO tblanuncio VALUES(?,?,?,?,?,?,?)";
 			$this->pdo->prepare($sql)->execute(
 				array(
+					null,
 					$data->titulo,
 					$data->descrp,
 					$data->fchcre,
@@ -36,6 +37,7 @@ class Anuncio {
 					$data->usuid,
 				)
 			);
+
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}

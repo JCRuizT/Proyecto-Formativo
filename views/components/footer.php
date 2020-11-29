@@ -1,7 +1,3 @@
-<script src="views/assets/js/jquery-3.5.1.min.js"></script>
-<script src="views/assets/js/jquery-confirm.min.js"></script>
-<script src="views/assets/js/bootstrap.bundle.min.js"></script>
-<script src="views/assets/js/bootstrap.min.js"></script>
 <script>
 
 	$('#modal').on('hidden.bs.modal', function () {
@@ -15,7 +11,6 @@
 <script>
 $(document).ready( function () {
     $('#table-data').DataTable({
-
         "language": {
             "url": "views/assets/js/spanish.json"
         }

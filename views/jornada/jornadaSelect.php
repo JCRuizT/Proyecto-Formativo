@@ -24,7 +24,7 @@
 						<tr>
 							<td>	<?php echo $filas->TipJor_Id; ?> </td>
 							<td>	<?php echo $filas->TipJor_Nombre; ?> </td>
-							<td> 	<button data-toggle="modal" data-target="#modal" class="btn btn-primary"onclick="Editar(<?php echo $grupal; ?>)"> Editar   </button>    </td>
+							<td> 	<button data-toggle="modal" data-target="#modal" class="btn btn-light"onclick="Editar(<?php echo $grupal; ?>)"> Editar   </button>    </td>
 							<td> 	<button class="btn btn-danger" onclick="BorrarJornada(<?php echo $filas->TipJor_Id; ?>);"> Eliminar </button>    </td>
 						</tr>
 

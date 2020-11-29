@@ -16,11 +16,10 @@
 						<div class="form-group">
 
 							<label>Numero de Ficha</label>
-<<<<<<< HEAD
 							<input type="number" class="form-control" required name="fic_num">
-=======
+
 							<input type="text" readonly class="form-control" required name="fic_num">
->>>>>>> 0fa1f937b0f5b1ebda82ee018dfbba6d382abb83
+
 						</div>
             <div class="form-group">
 

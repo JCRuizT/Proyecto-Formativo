@@ -11,6 +11,10 @@
         <link href="views/assets/css/styles-custom.css" rel="stylesheet"/>
         <link href="views/assets/css/jquery-confirm.css" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="views/DataTables/datatables.min.css"/>
+        <script src="views/assets/js/jquery-3.5.1.min.js"></script>
+        <script src="views/assets/js/jquery-confirm.js"></script>
+        <script src="views/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="views/assets/js/bootstrap.min.js"></script>
 
 
     </head>

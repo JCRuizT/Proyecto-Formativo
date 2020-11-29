@@ -17,11 +17,9 @@ class AnuncioController {
 
 		date_default_timezone_set('America/Bogota');
 		$datos = $this->anuncio;
-
 		$datos->titulo = $_REQUEST['titulo'];
 		$datos->descrp = $_REQUEST['descripcion'];
-
-		$datos->ficid = 1907036; // para cambiar dependiendo la ficha
+		$datos->ficid = 1; // para cambiar dependiendo la ficha
 		$datos->fchcre = date('Y-m-d');
 		$datos->usuid = 1005934460; // dependiendo la session, y el usuario ingresado
 		$datos->estid = 1;

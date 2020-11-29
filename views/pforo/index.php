@@ -13,7 +13,6 @@
                 <div id="tview">
                     <?php include 'pforoSelect.php';?>
                 </div>
-                <button data-toggle="modal" title="Crear Ficha" class="open-modal btn btn-dark rounded-circle" data-target="#modal">+</button>
 
             	<!--<?php include 'pforo.php';?>-->
             </div>
