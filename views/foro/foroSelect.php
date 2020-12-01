@@ -37,7 +37,7 @@ $id = $filas->For_IdForo;
 							<td> <?php echo ($filas->TblEstado_Est_Id == 1) ? "Activo" : "Inactivo"; ?> </td>
 							<td> 	<button data-toggle="modal" data-target="#modal" class="btn btn-light"onclick="Editar(<?php echo $grupal; ?>)"> Editar   </button>    </td>
 							<td> 	<button class="btn btn-danger" onclick="BorrarForo(<?php echo $filas->For_IdForo; ?>);"> Eliminar </button>    </td>
-							<td><a href="main.php?ctrl=pforo&acti=index&pid=<?php echo $filas->For_IdForo ?>"> <button class="btn btn-warning">Send Message</button></a></td>
+							<td><a href="main.php?ctrl=pforo&acti=index&pid=<?php echo $filas->For_IdForo ?>"> <button class="btn btn-warning">Ver Foro</button></a></td>
 						</tr>
 				<?php endforeach;?>
 		</tbody>

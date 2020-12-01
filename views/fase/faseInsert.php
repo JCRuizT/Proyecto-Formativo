@@ -2,14 +2,14 @@
   		<div class="modal-dialog modal-dialog-centered" role="document">
     		<div class="modal-content animation-dark">
       			<div class="modal-header">
-        			<h5 class="modal-title">Programas de formacion</h5>
+        			<h5 class="modal-title">Fases</h5>
         			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           				<span aria-hidden="true">&times;</span>
         			</button>
       			</div>
       			<div class="modal-body">
 
-      				<form name="formpformacion" id="formpformacion" class="form-cerrar" onSubmit="Validar(); return false">
+      				<form name="formfase" id="formfase" class="form-cerrar" onSubmit="Validar(); return false">
 
 						<input type="text" name="id" hidden>
 						<div class="form-group">

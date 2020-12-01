@@ -38,7 +38,7 @@ class FaseController {
 
 		$datos->name = $_REQUEST['nombre'];
 		$datos->id = $_REQUEST['id'];
-		$this->tidentificacion->Update($datos);
+		$this->fase->Update($datos);
 
 		require_once 'views/fase/faseSelect.php';
 	}
